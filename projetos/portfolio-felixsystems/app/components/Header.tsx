@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
@@ -7,14 +6,11 @@ export default function Header() {
     <header className="fixed w-full top-0 z-50 bg-white/95 dark:bg-slate-950/95 shadow-sm backdrop-blur-sm border-b border-gray-100 dark:border-white/5">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
         <Link href="/" className="flex items-center group hover:opacity-90 transition-opacity">
-          <Image
+          <img
             src="/images/logo.png"
             alt="Felix Systems"
-            height={60}
-            width={420}
-            style={{ height: '60px', width: 'auto' }}
-            priority
-            unoptimized
+            style={{ height: '60px', width: 'auto', minWidth: '200px' }}
+            loading="eager"
           />
         </Link>
 
