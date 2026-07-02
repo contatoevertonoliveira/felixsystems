@@ -43,7 +43,7 @@ export default function Process() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-32 text-center">
           <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
             Pronto para começar? Vamos transformar seu desafio em solução.
           </p>
