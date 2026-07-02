@@ -1,0 +1,44 @@
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Primeiro F em Azul Royal -->
+  <path d="M 80 20 L 180 20 L 180 80 L 80 80 L 80 150 L 180 150 L 180 220 L 20 220 L 20 20 Z"
+        fill="url(#blueGrad)" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- Segundo F em Azul Royal - offset -->
+  <path d="M 120 90 L 220 90 L 220 150 L 120 150 L 120 220 L 220 220 L 220 290 L 60 290 L 60 90 Z"
+        fill="url(#blueGrad)" opacity="0.8" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- S em Verde -->
+  <path d="M 280 110 Q 330 110 345 130 Q 360 150 325 162 Q 360 174 345 194 Q 330 214 280 214 Q 245 214 230 195 L 275 180 Q 295 180 305 172 Q 318 164 310 155 Q 302 147 275 147 Q 240 147 227 130 Q 214 110 255 110 Z"
+        fill="url(#greenGrad)" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- Circuitos - Linha 1 (superior esquerda) -->
+  <line x1="10" y1="65" x2="55" y2="65" stroke="#06B6D4" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="10" cy="65" r="6" fill="none" stroke="#06B6D4" stroke-width="3"/>
+  <circle cx="55" cy="65" r="6" fill="none" stroke="#06B6D4" stroke-width="3"/>
+
+  <!-- Circuitos - Linha 2 (meio esquerda) -->
+  <line x1="5" y1="130" x2="50" y2="130" stroke="#06B6D4" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="5" cy="130" r="6" fill="none" stroke="#06B6D4" stroke-width="3"/>
+  <circle cx="50" cy="130" r="6" fill="none" stroke="#06B6D4" stroke-width="3"/>
+
+  <!-- Circuitos - Linha 3 (inferior esquerda) -->
+  <line x1="12" y1="195" x2="57" y2="195" stroke="#06B6D4" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="12" cy="195" r="6" fill="none" stroke="#06B6D4" stroke-width="3"/>
+  <circle cx="57" cy="195" r="6" fill="none" stroke="#06B6D4" stroke-width="3"/>
+
+  <!-- Circuitos - Linha conectora direita -->
+  <line x1="385" y1="165" x2="430" y2="165" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="385" cy="165" r="6" fill="none" stroke="#10B981" stroke-width="3"/>
+  <circle cx="430" cy="165" r="6" fill="none" stroke="#10B981" stroke-width="3"/>
+</svg>

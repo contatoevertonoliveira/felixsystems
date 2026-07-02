@@ -1,15 +1,112 @@
-# MazyOS — Sistema operacional do negócio
+# FelixSystems — MazyOS
 
-Sua empresa roda em cima desse arquivo. Aqui ficam as regras de operação
-do MazyOS — como o Claude lê o contexto, aprende com correções, mantém
-tudo atualizado e cria skills novas conforme a operação evolui.
+> Operação de desenvolvimento e IA. Aqui ficam todos os clientes, projetos, briefings, entregas, brand e automações.
 
-Esse arquivo é editável. Quando o `/instalar` rodar, ele complementa o
-final dessa página com as regras específicas do seu negócio.
+**Workspace:** FelixSystems é uma operação freelancer solo de resolução de problemas através de tecnologia — sites, sistemas, chats, automações, IA. Estruturação em andamento via MazyOS.
 
 ---
 
-## Contexto do negócio
+## Estrutura de pastas
+
+- `_memoria/` — quem somos (FelixSystems), tom de voz, foco atual (estruturação)
+- `identidade/` — brand visual, logo, design guide (em desenvolvimento)
+- `clientes/` — um cliente por pasta, cada um autossuficiente com briefing e entregas
+- `projetos/` — projetos internos (ex: site de portfólio próprio)
+- `propostas/` — propostas em rascunho ou enviadas
+- `marketing/` — conteúdo próprio de marketing (LinkedIn, Insta, etc.)
+- `saidas/` — documentos pontuais (emails, PDFs)
+- `dados/` — arquivos a analisar
+- `templates/` — templates de skills e CLAUDE.md para diferentes perfis
+
+---
+
+## Quem somos
+
+**FelixSystems** — operação solo (Everton) de desenvolvimento especializado em resolução de problemas através de tecnologia. Focamos em pessoas reais com problemas reais.
+
+---
+
+## O que entregamos
+
+- **Sites modernos e futuristas** — Next.js/React, com foco em UX e interfaces que vendem
+- **Sistemas de IA** — chatbots, automações inteligentes, integração Claude/APIs
+- **Automações** — processos, workflows, integração de ferramentas
+- **Soluções customizadas** — qualquer coisa que resolver a "dor" do cliente
+
+Ticket típico: varia muito. Capacidade: 1-2 projetos simultâneos no máximo (foco em qualidade).
+
+---
+
+## Como operamos
+
+1. **Briefing:** cliente explica a dor, expectativa, timeline. Registra em `clientes/<Nome>/briefing.md`.
+2. **Proposta:** entrega `clientes/<Nome>/proposta.html` com escopo, timeline, valor.
+3. **Desenvolvimento:** toda coisa aqui dentro de `clientes/<Nome>/` (estrutura por projeto).
+4. **Entrega:** entrega de código, docs ou site rodando. Suporte inicial incluído.
+5. **Cobrança:** email com NF quando fechar ou por milestone.
+
+---
+
+## Contexto geral
+
+Leia no início de cada conversa (quando preenchido):
+
+1. `_memoria/empresa.md` — quem é FelixSystems, clientes, foco
+2. `_memoria/preferencias.md` — tom de voz, o que evitar
+3. `_memoria/estrategia.md` — gargalo (estruturação), tarefa repetitiva (dev prático)
+
+Pra qualquer tarefa visual, consultar `identidade/design-guide.md`.
+
+---
+
+## Fluxo de trabalho
+
+**Skills:** verificar se existe skill relevante em `.claude/skills/` antes de executar. Se tiver, usar. Se não, executar normal.
+
+**Cliente novo:** usar `/novo-projeto` pra criar pasta estruturada com CLAUDE.md, briefing.md e subpastas.
+
+**Proposta:** criar em `clientes/<Nome>/proposta.html` usando padrão (header com logo, escopo claro, pricing, timeline).
+
+**Aprender com correções:** quando o usuário corrigir algo ou dar instrução permanente, oferecer salvar em `_memoria/` ou neste CLAUDE.md.
+
+**Manter atualizado:** quando fechar cliente, integrar ferramenta, ou mudar prioridade, oferecer atualizar memória.
+
+---
+
+## Próximas ações (setups pendentes)
+
+- [ ] Receber briefing visual completo (cores, fontes, logo, design guide)
+- [ ] Receber textos de marca e exemplos de tom de voz real
+- [ ] Criar site de portfólio da FelixSystems (via `/novo-projeto`)
+- [ ] Mapear e automatizar tarefas repetitivas de dev (via `/mapear-rotinas`)
+- [ ] Conectar GitHub pra versioning automático (via `/salvar`)
+
+---
+
+## Regras do sistema
+
+- **Cliente novo** → `clientes/<Nome>/briefing.md` + `CLAUDE.md` específico
+- **Proposta enviada** → `clientes/<Nome>/proposta.html`
+- **Dev prático** → tudo dentro de `clientes/<Nome>/` (código, assets, docs)
+- **Conteúdo de marketing da FelixSystems** → `marketing/`
+- **Site do portfólio** → `projetos/portfolio-felixsystems/` (projeto interno)
+- **Quando briefing visual chegar** → atualizar `identidade/design-guide.md` e `_memoria/preferencias.md`
+
+---
+
+## Ferramentas conectadas
+
+- [ ] GitHub (`.claude/skills/salvar` — push automático)
+- [ ] Meta Graph API (pra publicar nas redes)
+- [ ] (Outras conforme for adicionando)
+
+---
+
+## Instruções gerais do MazyOS
+
+As regras abaixo aplicam a QUALQUER workspace rodando MazyOS:
+
+### Contexto do negócio
 
 No início de toda conversa, ler os seguintes arquivos (quando existirem
 e estiverem preenchidos):
@@ -28,25 +125,7 @@ Pra qualquer tarefa visual (carrossel, post, landing page), consultar
 Não é necessário listar o que foi lido nem confirmar a leitura. Apenas
 usar o contexto naturalmente.
 
----
-
-## Fluxo de trabalho
-
-Antes de executar qualquer tarefa, verificar se existe skill relevante
-em `.claude/skills/`. Se encontrar, seguir as instruções da skill. Se
-não encontrar, executar a tarefa normalmente.
-
-Ao concluir uma tarefa que não tinha skill mas parece repetível (o
-usuário provavelmente vai pedir de novo no futuro), perguntar:
-
-> "Isso pode virar uma skill pra próxima vez. Quer que eu crie?"
-
-Não perguntar pra tarefas pontuais ou perguntas simples. Só quando o
-padrão de repetição for claro.
-
----
-
-## Aprender com correções
+### Aprender com correções
 
 Quando o usuário corrigir algo, melhorar uma resposta ou dar uma
 instrução que parece permanente (frases como "na verdade é assim", "não
@@ -65,51 +144,13 @@ Se sim, identificar onde faz mais sentido salvar:
 Salvar com uma linha nova clara, sem reformatar o arquivo inteiro.
 Confirmar mostrando a linha adicionada.
 
-Não perguntar se a correção for óbvia de contexto imediato (ex: "na
-verdade o arquivo se chama X"). Só perguntar quando a informação tiver
-valor duradouro.
-
----
-
-## Manter contexto atualizado
-
-Ao terminar uma tarefa que mudou algo relevante (cliente novo, skill
-nova, mudança de foco, processo novo, ferramenta instalada, estrutura
-alterada), perguntar:
-
-> "Isso mudou algo no teu contexto. Quer que eu atualize a memória?"
-
-Se sim, identificar o que atualizar:
-
-- **Cliente, serviço, ferramenta, equipe** → `_memoria/empresa.md`
-- **Mudança de prioridade ou foco** → `_memoria/estrategia.md`
-- **Tom ou estilo** → `_memoria/preferencias.md`
-- **Pasta, regra de organização, skill criada** → `CLAUDE.md`
-- **Visual (cores, fontes, logo)** → `identidade/design-guide.md`
-
-Mostrar o que vai mudar antes de salvar. Não reformatar o arquivo
-inteiro, só adicionar ou editar a linha relevante.
-
-**Quando NÃO perguntar:**
-- Tarefas pontuais sem impacto no contexto (escrever um email avulso, criar um post)
-- Perguntas simples ou conversas sem ação
-- Mudanças já salvas pelo bloco "Aprender com correções"
-
-**Dica:** rode `/atualizar` pra uma varredura completa quando houver dúvida.
-
----
-
-## Criação de skills
+### Criação de skills
 
 Quando o usuário pedir skill nova:
 
 1. Verificar se existe template relevante em `templates/skills/`. Se
    existir, usar como base e adaptar pro contexto
-2. Perguntar se é específica desse projeto ou útil em qualquer:
-   - Específica → `.claude/skills/nome-da-skill/SKILL.md` (local)
-   - Universal → `~/.claude/skills/nome-da-skill/SKILL.md` (global)
-3. Ler `_memoria/empresa.md` e `_memoria/preferencias.md` pra calibrar
-   o conteúdo da skill ao contexto do negócio
-4. Se a skill precisar de arquivos de apoio (templates, exemplos),
-   criar dentro da pasta da skill
+2. Perguntar se é específica desse projeto ou global
+3. Ler `_memoria/` pra calibrar o conteúdo ao contexto do negócio
+4. Criar em `.claude/skills/` (local) ou `~/.claude/skills/` (global)
 5. Seguir o fluxo da skill-creator nativa do Claude Code
